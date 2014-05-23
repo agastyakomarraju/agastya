@@ -1,6 +1,6 @@
 Description about runanalysis.R
 =======
-Summary: 
+
 run_analysis.R does the following: 
 
  1. Merges the training and the test sets to create one data set.
@@ -39,14 +39,14 @@ Here is a list of files that are used by the script:
  1. activity_labels.txt
  
  
-Steps:
-1. The code reads all the datasets from segment 1 and merges them into a table
-2. It then names all the varialbes based on the information in Segment 3 (features.txt)
-3. It repeats the process for test files in Segment 2
-4. These files are then appeneded to form a large table with 10299 rows - This is the answer to question 1
-5. A grep function is written to subset this table into a table with only mean and std columns. It ignores meanFreq columns. For the purpose of this project only mean columns are being considered - This is the answer to question 2
-6. Activity and Subject are added to this dataset and merged with the lookup table present in Secment 4 ( activity.txt). 7. The resulting data set will have a column which will catpture activity descriptions
-8. We will then create a tidy data set "Final_Aggregation.txt" which will be placed in the working directory
+Summary:
+The code reads all the datasets from segment 1 and merges them into a table
+It then names all the varialbes based on the information in Segment 3 (features.txt)
+It repeats the process for test files in Segment 2
+These files are then appeneded to form a large table with 10299 rows - This is the answer to question 1
+A grep function is written to subset this table into a table with only mean and std columns. It ignores meanFreq columns. For the purpose of this project only mean columns are being considered - This is the answer to question 2
+Activity and Subject are added to this dataset and merged with the lookup table present in Secment 4 ( activity.txt). The resulting data set will have a column which will catpture activity descriptions
+We will then create a tidy data set "Final_Aggregation.txt" which will be placed in the working directory
 
 Reading back Final_Aggregation.txt:
 
