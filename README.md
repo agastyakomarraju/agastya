@@ -45,7 +45,7 @@ It then names all the varialbes based on the information in Segment 3 (features.
 It repeats the process for test files in Segment 2.
 These files are then appeneded to form a large table with 10299 rows - This is the answer to question 1.
 A grep function is written to subset this table into a table with only mean and std columns. It ignores meanFreq columns. For the purpose of this project only mean columns are being considered - This is the answer to question 2.
-Activity and Subject are added to this dataset and merged with the lookup table present in Secment 4 ( activity.txt). The resulting data set will have a column which will catpture activity descriptions.
+Activity and Subject are added to this dataset and merged with the lookup table present in Segment 4 ( activity.txt). The resulting data set will have a column which will catpture activity descriptions.
 We will then create a tidy data set "Final_Aggregation.txt" which will be placed in the working directory.
 
 Reading back Final_Aggregation.txt:
