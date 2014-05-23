@@ -20,32 +20,39 @@ All Intertial Signal files in the "UCI HAR Dataset"  will be ignored.
 
 Here is a list of files that are used by the script: 
  
- For creating training merged dataset:
+ Segment 1 - For creating training merged dataset:
  1. x_train.txt
  2. y_train.txt
  3. subject_train.txt
  
 
- For creating training merged dataset:
+ Segment 2 - For creating training merged dataset:
  1. x_test.txt
  2. y_test.txt
  3. subject_test.txt
 
- For Adding variable names:
-
+ Segment 3 - For Adding variable names:
  1. features.txt
 
 
- For Adding Activity Descriptions:
-
+ Segment 4 - For Adding Activity Descriptions:
  1. activity_labels.txt
  
  
- For Adding variable names:
- 
- 1. features.txt
+Steps:
+1.) The code reads all the datasets from segment 1 and merges them into a table.
+2.) It then names all the varialbes based on the information in Segment 3 (features.txt)
+3.) It repeats the process for test files in Segment 2
+4.) These files are then appeneded to form a large table with 10299 rows - This is the answer to question 1
+5.) A grep function is written to subset this table into a table with only mean and std columns. It ignores meanFreq columns. For the purpose of this project only mean columns are being considered - This is the answer to question 2
+6.) Activity and Subject are added to this dataset and merged with the lookup table present in Secment 4 ( activity.txt). 7.) The resulting data set will have a column which will catpture activity descriptions
+8.) We will then create a tidy data set "Final_Aggregation.txt" which will be placed in the working directory.
+
+Reading back Final_Aggregation.txt:
+
+You can read back this from the text file by using this code:
+agg_tab<- read.table("Final_Aggregation.txt", header=TRUE)
 
 
-# For Adding Activity Descriptions:
-###################
-# activity_labels.txt
+
+
